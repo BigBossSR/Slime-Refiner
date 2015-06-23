@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jelly Refiner</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class="container">
+	<div class="intro active">
+		<h1>Welcome to Jelly Refiner!</h1>
+		<p>Well, the time has finally come. It's been three years since you left college with your advanced degree in the humanities proudly in hand, and there are no jobs in Medieval Literature to be found. Your father has given you an ultimatum: take over one of the family Jelly Refineries or move out. You've always hated the idea of refining jellies for resources, but... well have you checked how much an apartment in the city costs lately?</p>
+	</div>
+
+	<div class="hud">
+		<h1>Your Factory</h1>
+		Refine jellies at the factory to extract their chemical resources. Redeem resources for cash!
+		<div id="hud-location">
+			<span id="jellies">Jellies: 0</span>
+			<span id="carbon">Carbon: 0</span>
+			<span id="cash">Cash: 0</span>
+		</div>
+	</div>
+
+	<div class="button-container">
+		<div class = "button">
+			<img src="assets/slimebutton.png" id="jelly-button">
+			Click here to refine jellies into resources!
+		</div>
+		<div class="button">
+			<img src="assets/redeembutton.png" id="redeem-button">
+			Click here to redeem resources for cash!
+		</div>
+	</div>
+
+	<div id="upgrade-location"></div>
+</div>
+
+
+<template id="hud-template">
+	<span id="jellies">Jellies: {{jellies}}</span>
+	<span id="carbon">Carbon: {{carbon}}</span>
+	<span id="cash">Cash: {{cash}}</span>
+</template>
+
+<template id="upgrade-template">
+	<div class="upgrade">
+		<div id="name">{{name}}</div>
+		<div id="cost">Cost: {{cost}}</div>
+		<div id="owned">Owned: {{owned}}</div>
+		<div id ="description">{{description}}</div>
+		<div id="max">Max per factory: {{max}}</div>
+	</div>
+</template>
+
+
+<script type="text/javascript" src="libs/jquery.js"></script>
+<script type="text/javascript" src="libs/underscore.js"></script>
+<script type="text/javascript" src="libs/handlebars.js"></script>
+<script type="text/javascript" src="upgrades.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
