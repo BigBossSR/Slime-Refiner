@@ -24,8 +24,8 @@ var upgrade = function(options) {
 	this.incrementOwned = function(){
 		if ((resources.cash >= this.cost) && (this.owned < this.max)) {		
 			this.owned += 1
-		    this.benefit()
 		    resources.cash -= this.cost
+		    this.benefit()
 	    }
 	}
 }
@@ -97,7 +97,12 @@ $(document).on("ready", function(){
 
 	$("#jelly-button").on("click", function(){
 		refineJelly()
+		$(this).css({"margin-bottom": "10px"})
+		setTimeout ((function(){
+			$(this).css({"margin-bottom": "0px"})
+		}).bind(this), 50)
 	})
+
 	$("#redeem-button").on("click", function() {
 		redeemCarbon()
 	})
