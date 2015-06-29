@@ -8,20 +8,7 @@ var catalog = {}
 var resourceMultiplier = 2
 var refineCount = 1
 
-var resource = function(options) {
-	this.name = options.name
-	this.multiplier = options.multiplier
-	this.max = 0
-	this.owned = 0
-}
 
-var addResource = function(options) {
-	this.data = new resource(options)
-	var htmlString = templates.resource(this.data)
-	this.$div = $(htmlString)
-
-	$("#resource-location").append(this.$div)
-}
 
 var upgrade = function(options) {
 	this.name = options.name
@@ -104,7 +91,6 @@ $(document).on("ready", function(){
 
 	templates.hud = Handlebars.compile($("#hud-template").html())
 	templates.upgrade = Handlebars.compile($("#upgrade-template").html())
-	templates.resource = Handlebars.compil($("#resource-template").html())
 
 	$(".intro").on("click", function(){
 		$(this).toggleClass("active")

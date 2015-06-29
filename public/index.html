@@ -14,6 +14,7 @@
 	<div class="hud">
 		<h1>Your Factory</h1>
 		Refine jellies at the factory to extract their chemical resources. Redeem resources for cash!
+		<div id="resource-location">
 		<div id="hud-location">
 			<span id="jellies">Jellies: 0</span>
 			<span id="carbon">Carbon: 0</span>
@@ -34,6 +35,11 @@
 
 	<div id="upgrade-location"></div>
 </div>
+
+<template id="resource-template">
+	<div class="resource">{{name}}: {{owned}}</div>
+	<div class="data">Maximum: {{max}}</div>
+</template>
 
 
 <template id="hud-template">
